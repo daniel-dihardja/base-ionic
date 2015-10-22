@@ -1,7 +1,7 @@
 {
-  "name" : "app-event0",
-  "version" : "1.0.0",
-  "description" : "Event0 App",
+  "name" : "base-ionic",
+  "version" : "0.0.1",
+  "description" : "base-ionic",
   "repository" : "https://",
 
   "devDependencies" : {
@@ -20,9 +20,6 @@
     "karma-mocha" : "",
     "karma-chai" : "",
     "karma-phantomjs-launcher" : ""
-
-
-
 
   }
 }
