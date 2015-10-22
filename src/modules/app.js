@@ -21,7 +21,7 @@
         .controller('appController', appController);
 
     appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
-    appController.$inject = ['$scope'];
+
 
 
     /**
@@ -55,6 +55,9 @@
 
         $urlRouterProvider.otherwise('/app/start');
     }
+
+
+    appController.$inject = ['$scope'];
 
     /**
      *
