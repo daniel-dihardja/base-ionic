@@ -12,5 +12,6 @@
     startController.$inject = ['$scope',  '$state'];
 
     function startController($scope, $state) {
+
     }
 })();
