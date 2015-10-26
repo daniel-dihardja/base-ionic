@@ -50,6 +50,36 @@
                         controller:'startController'
                     }
                 }
+            })
+
+            .state('app.intro', {
+                url:'/intro',
+                views:{
+                    'menuContent': {
+                        templateUrl:'modules/intro/intro.html',
+                        controller:'introController'
+                    }
+                }
+            })
+
+            .state('app.register', {
+                url:'/register',
+                views:{
+                    'menuContent': {
+                        templateUrl:'modules/register/register.html',
+                        controller:'registerController'
+                    }
+                }
+            })
+
+            .state('app.settings', {
+                url:'/settings',
+                views:{
+                    'menuContent': {
+                        templateUrl:'modules/settings/settings.html',
+                        controller:'introController'
+                    }
+                }
             });
 
 
