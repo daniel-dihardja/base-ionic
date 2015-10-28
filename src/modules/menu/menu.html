@@ -9,7 +9,7 @@
                 </button>
             </ion-nav-buttons>
         </ion-nav-bar>
-        <ion-nav-view name="menuContent"></ion-nav-view>
+        <ion-nav-view name="menuContent" animation="slide-left"></ion-nav-view>
     </ion-side-menu-content>
 
     <ion-side-menu side="left">
@@ -19,13 +19,13 @@
         <ion-content>
             <ion-list>
                 <ion-item menu-close href="#">
-                    Intro
+                    {{'TXT_MENU_BOOTHPLAN' | translate}}
+                </ion-item>
+                <ion-item menu-close href="/#app/register">
+                    {{'TXT_MENU_REGISTER' | translate}}
                 </ion-item>
                 <ion-item menu-close href="#">
-                    Register
-                </ion-item>
-                <ion-item menu-close href="#">
-                    settings
+                    {{'TXT_MENU_SETTINGS' | translate}}
                 </ion-item>
             </ion-list>
         </ion-content>

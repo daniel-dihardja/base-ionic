@@ -13,7 +13,17 @@
 
     function translationsConfig($translateProvider) {
         $translateProvider.translations('de', {
-            'TXT_EVENTS'                : 'EVENTS'
+            'TXT_REGISTER'          : 'Registrieren',
+            'TXT_REG_FIRST_NAME'    : 'Vorname',
+            'TXT_REG_LAST_NAME'     : 'Nachname',
+            'TXT_REG_EMAIL'         : 'E-Mail',
+            'TXT_REG_SUBMIT'        : 'Registrieren',
+
+            'TXT_MENU_BOOTHPLAN'    : 'Karte',
+            'TXT_MENU_REGISTER'     : 'Registrieren',
+            'TXT_MENU_SETTINGS'     : 'Einstellungen'
         });
+
+        $translateProvider.use('de');
     }
 })();

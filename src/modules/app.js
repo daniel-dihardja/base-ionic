@@ -52,12 +52,12 @@
                 }
             })
 
-            .state('app.intro', {
+            .state('app.boothplan', {
                 url:'/intro',
                 views:{
                     'menuContent': {
-                        templateUrl:'modules/intro/intro.html',
-                        controller:'introController'
+                        templateUrl:'modules/boothplan/index.html',
+                        controller:'boothplanController'
                     }
                 }
             })
@@ -66,7 +66,7 @@
                 url:'/register',
                 views:{
                     'menuContent': {
-                        templateUrl:'modules/register/register.html',
+                        templateUrl:'modules/register/index.html',
                         controller:'registerController'
                     }
                 }
