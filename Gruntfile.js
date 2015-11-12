@@ -11,8 +11,7 @@ module.exports = function(grunt) {
             dev: {
                 src:[
                     'src/assets/css',
-                    'src/assets/fonts',
-                    'src/assets/zicons'
+                    'src/assets/fonts'
                 ]
             }
         },
