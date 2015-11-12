@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         },
 
         copy:{
-            task0: {
+            index_www: {
                 src:    'src/index.html', dest:'www/index.html'
             },
 
@@ -47,13 +47,6 @@ module.exports = function(grunt) {
                 expand: true
             },
 
-            zeroicons_www:{
-                cwd:    'src/assets/zicons',
-                src:    '*.*',
-                dest:   'www/assets/zicons',
-                expand: true
-            },
-
             images:{
                 cwd:    'src/assets/images',
                 src:    '*.*',
@@ -63,7 +56,7 @@ module.exports = function(grunt) {
         },
 
         ngtemplates:  {
-            'zero':{
+            'app':{
                 cwd:      'src',
                 src:      'modules/**/*.html',
                 dest:     'www/js/templates.js'
@@ -85,11 +78,9 @@ module.exports = function(grunt) {
         webfont: {
             dev: {
                 src: 'src/assets/svg/*.svg',
-                dest: 'src/assets/zicons'
-
+                dest: 'src/assets/iconfonts'
             }
         }
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -110,13 +101,12 @@ module.exports = function(grunt) {
         'copy:icons_dev',
         'sass',
         'webfont:dev'
-    ])
+    ]);
 
     grunt.registerTask('www', [
         'clean:www',
-        'copy:task0',
+        'copy:index_www',
         'copy:icons_www',
-        'copy:zeroicons_www',
         'copy:images',
         'useminPrepare',
         'concat',
