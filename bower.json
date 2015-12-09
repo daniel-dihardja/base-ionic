@@ -4,10 +4,8 @@
   "dependencies": {
     "angular": "1.4.3",
     "angular-translate": "2.5.2",
-    "ngCordova" : "0.1.12-alpha",
     "ionic" : "1.1.0",
     "ionicons" : "2.0.0",
-    "jquery": "components/jquery#~2.1.1",
-    "ngstorage" : "x.x.x"
+    "jquery": "components/jquery#~2.1.1"
   }
 }

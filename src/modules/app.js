@@ -12,17 +12,14 @@
      */
 
     angular.module('app', [
-        'ngCordova',
-        'ngStorage',
-        'ionic',
+		'ionic',
+        'ionicLazyLoad',
         'pascalprecht.translate'])
 
         .config(appConfig)
         .controller('appController', appController);
 
-    appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
-
-
+    appConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider', '$ionicConfigProvider'];
 
     /**
      *
@@ -30,7 +27,10 @@
      * @param $urlRouterProvider
      * @param $translateProvider
      */
-    function appConfig($stateProvider, $urlRouterProvider, $translateProvider) {
+    function appConfig($stateProvider, $urlRouterProvider, $translateProvider, $ionicConfigProvider) {
+
+
+		$ionicConfigProvider.scrolling.jsScrolling(false);
 
         $translateProvider.preferredLanguage('de');
 
@@ -38,7 +38,7 @@
             .state('app', {
                 url:'/app',
                 abstract : true,
-                templateUrl:'modules/menu/menu.html',
+                templateUrl:'modules/menu/index.html',
                 controller:'menuController'
             })
 
@@ -46,18 +46,18 @@
                 url:'/start',
                 views:{
                     'menuContent': {
-                        templateUrl:'modules/start/start.html',
+                        templateUrl:'modules/start/index.html',
                         controller:'startController'
                     }
                 }
             })
 
-            .state('app.boothplan', {
-                url:'/intro',
+            .state('app.megalist', {
+                url:'/megalist',
                 views:{
                     'menuContent': {
-                        templateUrl:'modules/boothplan/index.html',
-                        controller:'boothplanController'
+                        templateUrl:'modules/megalist/index.html',
+                        controller:'megalistController'
                     }
                 }
             })
@@ -76,11 +76,15 @@
                 url:'/settings',
                 views:{
                     'menuContent': {
-                        templateUrl:'modules/settings/settings.html',
-                        controller:'introController'
+                        templateUrl:'modules/settings/index.html',
+                        controller:'settingsController'
                     }
                 }
-            });
+            })
+
+
+
+
 
 
         $urlRouterProvider.otherwise('/app/start');

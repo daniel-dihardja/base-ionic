@@ -98,8 +98,7 @@ module.exports = function(grunt) {
     grunt.registerTask('dev', [
         'clean:dev',
         'copy:icons_dev',
-        'sass',
-        'webfont:dev'
+        'sass'
     ]);
 
     grunt.registerTask('www', [
