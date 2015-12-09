@@ -4,7 +4,7 @@
 
     /**
      * @ngdoc overview
-     * @name app-event0:Module
+     * @name app:Module
      *
      * @description
      * app main module
